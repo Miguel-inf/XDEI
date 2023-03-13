@@ -1,0 +1,127 @@
+.message {
+    font-weight: 600;
+    color: blue;
+}
+
+.navbar {
+    background-color: lightslategray;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding: 8px 5px 8px 5px;
+    height: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-brand {
+    font-size: xx-large;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.navbar-item {
+    font-size: xx-large;
+    font-weight: 600;
+    margin-left: 70px;
+}
+
+#stores{
+    color:pink
+}
+
+#products{
+    color:greenyellow
+}
+
+.body-content {
+    padding: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#Fiware{ height: 38px;
+    width: 200px;
+    float: right;
+
+}
+
+#Diagrama{
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#Title{ font-family: fantasy;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+
+table{border-collapse: collapse;
+    border-top: 3px;
+    border: 3px solid black;
+    border-spacing: 0cap;
+    width: 50%;  
+    font-size: x-large;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+th, td {
+        width: 100%;
+        border: 1px solid #000;
+     }
+
+
+#Stores{
+    background-color: pink;
+}
+
+#Products{
+    background-color: greenyellow;
+}
+
+
+#Store{
+    background-color: pink;
+    width: 70%; 
+}
+
+#Store th, td{
+    width: 50%;
+    
+}
+
+
+#cabecera{
+    font-weight: bold;
+    width: 25%;
+}
+
+#Anidada {border: hidden;
+    width: 100%;}
+
+
+
+#Product {
+    background-color: greenyellow;
+    width: 70%; 
+}
+
+#Product th, td{
+    width: 50%;
+    
+}
+
+#Product_items {
+    border-top-style: hidden;
+    background-color: greenyellow;
+    width: 70%; 
+}

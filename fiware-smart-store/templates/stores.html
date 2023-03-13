@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}
+Stores
+{% endblock %}
+{% block content %}
+<p></p>
+<table id="Stores">
+    <thead><tr>
+      <td><strong>Store ID</strong></td>
+    </tr></thead>
+    {% for store in stores %}
+        {% set store_url = store_base_url + store.id %}
+        {% set id_items = store.id.split(':') %}
+        <tbody>
+        <tr>
+            <td><a href={{store_url}}>Store {{id_items[3]}}</a></td>
+        </tr>
+        </tbody>
+
+    {% endfor %}
+</table>
+{% endblock %}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
+    </head>
+
+    <body>
+        <div class="navbar">
+            <a href="{{ url_for('inicio') }}" class="navbar-brand">Inicio</a>
+            <a id="stores" href="{{ url_for('stores') }}" class="navbar-item">Stores</a>
+            <a id="products" href="{{ url_for('products') }}" class="navbar-item">Products</a>
+            <img id="Fiware" src="{{ url_for('static', filename='/Image/fiware.png')}}" alt="Fiware">
+        </div>
+
+        <div class="body-content">
+            {% block content %}
+            {% endblock %}
+            <hr/>
+        </div>
+    </body>
+</html>

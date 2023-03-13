@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+{% block title %}
+Store
+{% endblock %}
+{% block content %}
+    {% set id_items = store.id.split(':') %}
+    <p>
+        <table id="Store">
+            <tr>
+              <td id="cabecera">Store ID</td>
+              <td>{{id_items[3]}}</td> 
+            </tr>
+
+            <tr>
+              <td id="cabecera">Name</td>
+              <td>{{store.name.value}}</td>
+            </tr>
+            <tr>
+              <td id="cabecera">Address</td>
+              <td>
+                <table id="Anidada">
+                  <tr>
+                    <td>Direccion</td>
+                    <td>Region</td>
+                    <td>Localidad</td>
+                    <td>Codigo Postal</td>
+                  </tr>
+                  <tr>
+                    <td>{{store.address.value.streetAddress}}</td>
+                    <td>{{store.address.value.addressRegion}}</td>
+                    <td>{{store.address.value.addressLocality}}</td>
+                    <td>{{store.address.value.postalCode}}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td id="cabecera">Location</td>
+              <td>
+                <table id="Anidada">
+                  <tr>
+                    <td>Longitud</td>
+                    <td>Latitud</td>
+                  </tr>
+                  <tr>
+                    <td>{{store.location.value.coordinates[0]}}</td>
+                    <td>{{store.location.value.coordinates[1]}}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td id="cabecera">Inventory Items</td>
+              <td>
+                <table id="Anidada">
+                  <tr>
+                  {% for inventory_item in inventory_items %}
+                    {% set id_items = inventory_item.id.split(':') %}
+                    <td>
+                        <a>{{id_items[3]}}</a>
+                    </td>
+                  {% endfor %}
+                  </tr> 
+                </table>
+              </td>
+            </tr>
+            
+          </table>
+    </p>
+{% endblock %}

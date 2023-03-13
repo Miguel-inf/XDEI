@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}
+Products
+{% endblock %}
+{% block content %}
+<p></p>
+<table id="Products">
+    <thead><tr>
+      <td><strong>Product ID</strong></td>
+    </tr>
+    {% for product in products %}
+        {% set product_url = product_base_url + product.id %}
+        {% set id_items = product.id.split(':') %}
+
+        <tr>
+            <td><a href={{product_url}}>Product {{id_items[3]}}</a></td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
